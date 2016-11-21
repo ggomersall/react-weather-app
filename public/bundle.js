@@ -24886,9 +24886,11 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	// use indexlink to stop multiple pages being show as activeClass if using IndexRoute
 
 	var _require = __webpack_require__(159),
-	    Link = _require.Link;
+	    Link = _require.Link,
+	    IndexLink = _require.IndexLink;
 
 	var Nav = React.createClass({
 	  displayName: 'Nav',
@@ -24903,18 +24905,18 @@
 	        'Nav Component'
 	      ),
 	      React.createElement(
-	        Link,
-	        { to: '/' },
+	        IndexLink,
+	        { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	        'Get Weather'
 	      ),
 	      React.createElement(
-	        Link,
-	        { to: '/about' },
+	        Index,
+	        { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	        'About'
 	      ),
 	      React.createElement(
-	        Link,
-	        { to: '/examples' },
+	        Index,
+	        { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	        'Examples'
 	      )
 	    );
