@@ -9,6 +9,11 @@ var Weather = require('Weather');
 var About = require('About');
 var Examples = require('Examples');
 
+// Load foundation
+// style!css! allows us to use the style loader and css loader
+require('style!css!foundation-sites/dist/foundation.min.css')
+$(document).foundation();
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
