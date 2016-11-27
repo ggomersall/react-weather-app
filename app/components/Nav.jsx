@@ -8,8 +8,8 @@ var Nav = React.createClass({
       <div>
         <h2>Nav Component</h2>
         <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink>
-        <Index to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Index>
-        <Index to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Index>
+        <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link>
+        <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link>
       </div>
     );
   }
