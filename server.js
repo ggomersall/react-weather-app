@@ -3,6 +3,7 @@ var express = require('express');
 // Create our app
 var app = express();
 // const means value can't be changed a const should be uppercase
+// this configures our port for heroku
 const PORT = process.env.PORT || 3001;
 
 // this is our middleware
