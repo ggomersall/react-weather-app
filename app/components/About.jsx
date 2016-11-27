@@ -9,7 +9,10 @@ var React = require('react');
 // stateless functional component
 var About = (props) => {
   return (
-    <h3>About Component</h3>
+    <div>
+      <h3>About</h3>
+      <p>This is our about page.... Welcome</p>
+    </div>
   );
 };
 module.exports = About;
