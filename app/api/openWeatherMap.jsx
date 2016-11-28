@@ -12,7 +12,15 @@ module.exports = {
       if (res.data.cod && res.data.message) {
         throw new Error(res.data.message);
       } else {
-        return res.data.main.temp;
+          var data = res.data.main;
+          console.log(data)
+          var data = {
+              temp: data.temp,
+              temp_min: data.temp_min,
+              temp_max: data.temp_max
+          }
+          return data;
+        
       }
     }, function(err) {
       throw new Error(err.response.data.message);
