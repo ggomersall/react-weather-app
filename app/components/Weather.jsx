@@ -16,7 +16,11 @@ var Weather = React.createClass({
 
     that.setState({
       isLoading: true,
-      errorMessage: undefined
+      errorMessage: undefined,
+      location: undefined,
+      temp: undefined,
+      temp_min: undefined,
+      temp_max: undefined
   });
 
     openWeatherMap.getTemp(location).then(function (data){
@@ -34,6 +38,26 @@ var Weather = React.createClass({
       });
     });
   },
+
+  componentDidMount: function() {
+    var location = this.props.location.query.location;
+
+    if(location && location.length > 0) {
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  },
+
+// this function below allows the parent to update the child prop
+  componentWillReceiveProps: function (newProps) {
+    var location = newProps.location.query.location;
+
+    if(location && location.length > 0) {
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  },
+
   render: function() {
     // we set this state below as ES6 desctructuring
     // to get temp and location down to WeatherMessage
