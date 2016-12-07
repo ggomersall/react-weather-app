@@ -20,7 +20,7 @@ module.exports = {
               temp_max: data.temp_max
           }
           return data;
-        
+
       }
     }, function(err) {
       throw new Error(err.response.data.message);
